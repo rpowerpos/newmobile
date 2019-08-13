@@ -37,10 +37,10 @@
         <splash density="port-xhdpi" src="www/res/screen/android/splash-port-xhdpi.png" />
         <splash density="port-xxhdpi" src="www/res/screen/android/splash-port-xxhdpi.png" />
         <splash density="port-xxxhdpi" src="www/res/screen/android/splash-port-xxxhdpi.png" />
-        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
-            <application usesCleartextTraffic="true" />
-        </edit-config>
         <allow-intent href="market:*" />
+        <edit-config file="AndroidManifest.xml" mode="merge" target="/manifest/application">
+            <application android:usesCleartextTraffic="true" />
+        </edit-config>
     </platform>
     <platform name="ios">
         <icon height="57" platform="ios" src="www/res/icon/ios/icon.png" width="57" />
