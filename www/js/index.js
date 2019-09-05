@@ -12,7 +12,7 @@ var app = {
     },
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        iabRef = cordova.InAppBrowser.open('https://www.rpowerpos.com/', '_blank', 'hidden=no,location=no,zoom=no,hardwareback=no');
+        iabRef = cordova.InAppBrowser.open('https://www.rpowerpos.com/Merchant/Home/Index', '_blank', 'hidden=no,location=no,zoom=no,hardwareback=no');
         iabRef.addEventListener('loadstart', iabLoadStart);
         iabRef.addEventListener('loadstop', iabLoadStop);
         iabRef.removeEventListener('loaderror', iabLoadError);
