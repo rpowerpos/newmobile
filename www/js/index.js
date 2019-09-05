@@ -33,5 +33,5 @@ function iabLoadStart(event) {
 }
 
 function iabLoadStop(event) {
-   iabRef.show();
+   //iabRef.show();
 }
