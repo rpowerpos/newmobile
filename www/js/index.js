@@ -12,8 +12,8 @@ var app = {
     },
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        iabRef = cordova.InAppBrowser.open('https://www.rpowerpos.com/Merchant/Home/Index', '_self', 'hidden=no,location=no,zoom=no,hardwareback=no');
         //iabRef = cordova.InAppBrowser.open('https://stc.rpower.com/Merchant/Home/Index', '_blank', 'hidden=no,location=no,zoom=no,hardwareback=no');
-        iabRef = cordova.InAppBrowser.open('https://stc.rpower.com/Merchant/Home/Index', '_blank', 'hidden=no,location=no,zoom=no,hardwareback=no');
         iabRef.addEventListener('loadstart', iabLoadStart);
         iabRef.addEventListener('loadstop', iabLoadStop);
         iabRef.removeEventListener('loaderror', iabLoadError);
@@ -23,7 +23,6 @@ var app = {
     // Update DOM on a Received Event
     receivedEvent: function(id) {
         var parentElement = document.getElementById(id);
-		window.alert(parentElement);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
         listeningElement.setAttribute('style', 'display:none;');
